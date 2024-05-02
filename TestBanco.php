@@ -37,7 +37,9 @@ $objCuentaCorriente1 = new CuentaCorriente(0, 0, "",0 );
 $objCuentaCorriente2 = new CuentaCorriente(0, 0, "",0 );
 $objBanco->incorporarCuentaCorriente("1", 5000);
 $objBanco->incorporarCuentaCorriente("2", 5000);
-
+$objBanco->realizarDeposito("1", 1000); //TODO:Realizo esto para poder agregarle dinero a las cuentas corrientes.
+$objBanco->realizarDeposito("2", 1000); //TODO:Realizo esto para poder agregarle dinero a las cuentas corrientes.
+$objBanco->realizarRetiro("1", 150); //TODO: Realiza la transferencia de cuenta corriente 1
 
 /**
  * ! **********************************************************
@@ -51,10 +53,11 @@ $objCajaDeAhorro3 = new CajaDeAhorro(0, 0, "");
 $objBanco->incorporarCajaAhorro(1);
 $objBanco->incorporarCajaAhorro(1);
 $objBanco->incorporarCajaAhorro(2);
-$objBanco->realizarDeposito(3, 300);
-$objBanco->realizarDeposito(4, 300);
-$objBanco->realizarDeposito(5, 300);
-$objBanco->realizarRetiro(1, 150);
+$objBanco->realizarDeposito("3", 300);
+$objBanco->realizarDeposito("4", 300);
+$objBanco->realizarDeposito("5", 300);
+$objBanco->realizarDeposito("5", 150); //TODO:Recibe la transferencia la caja de ahorro del cliente 2.
+
 echo $objBanco;
 
 
@@ -76,7 +79,7 @@ echo $objBanco;
 
 
 /**
- * ! TEST QUE REALIZE PARA COMPROBAR SU FUNCIONAMIENTO. 
+ * ! TEST QUE REALIZE PARA COMPROBAR SU FUNCIONAMIENTO MIENTRAS REALIZABA LOS METODOS. 
  * !
  */
 // $objCliente1 = new Cliente(437372, "Erick", "Gonzalez", "1234");
